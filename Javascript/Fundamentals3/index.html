@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let add7 = (number) => number + 7;
+        console.log(add7(0));
+        
+        let multiply = (factor1, factor2) => factor1 * factor2;
+        console.log(multiply(9,8));
+
+        function capitalize(str) {
+            let lowered = str.toLowerCase();
+            return lowered.replace(lowered[0], lowered[0].toUpperCase());
+        }
+        console.log(capitalize("mR.bulLGOBBS"));
+        console.log(capitalize("MR>BULLGOBBS"));
+        console.log(capitalize("mr.bullgobbs"));
+        
+        let lastLetter = (str) => str.slice(-1);
+        console.log(lastLetter("THE LAST LETTER IS a"));
+    </script>
+</head>
+<body>
+    <h2 id="id" class="class">Hello, World!</h2>
+    <p>This is a paragraph</p>
+</body>
+</html>
