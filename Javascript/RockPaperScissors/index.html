@@ -8,7 +8,33 @@
     <script>
         // computerPlay returns the computer's throw
 
+        function computerPlay() {
+            // Get random play number 0 to 2
+            let playNumber = Math.floor((Math.random() * 3))
+            console.log(playNumber);
+            
+            // Get play Object
+            switch (playNumber) {
+                case 0:
+                    return "Rock"
+                    break;
+                    
+                case 1:
+                    return "Paper"
+                    break;
 
+                case 2:
+                    return "Scissors"
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+
+        for (let index = 0; index < 10; index++) {
+            console.log(computerPlay());
+        }
 
         /* playRound(playerSelection, computerSelection)
            plays a round between player and computer 
