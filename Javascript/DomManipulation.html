@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DomManipulation</title>
+</head>
+<body>
+    <!-- HTML -->
+    <h1>
+        THE TITLE OF YOUR WEBPAGE
+    </h1>
+    <div id="container">
+        <div class="content">
+            This is the glorious text-content!
+            <button onclick="alert('Hello World')">Click Me 1</button>
+            <button id="btn">Click Me 2</button>
+            <button id="btn3">Click Me 3</button>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script async>
+        // create paragraph
+        const p = document.createElement('p');
+        p.textContent = 'hello, i am a new paragraph'
+        p.style.color = 'red';
+
+        // select content
+        const content = document.querySelector('div.content');
+
+        // place paragraph
+        content.appendChild(p);
+
+        // create h3
+        const h3 = document.createElement('h3');
+        h3.style.color = 'blue';
+        h3.textContent = "I'm a blue h3!";
+
+        // place h3
+        content.appendChild(h3);
+
+        // create div
+        const div = document.createElement('div');
+        div.style.border = 'black';
+        div.style.backgroundColor = 'pink';
+        
+        //  append h1 child to div
+        const h1 = document.createElement('h1');
+        h1.textContent = "I'm in a div";
+        div.appendChild(h1);
+
+        //  append p child to div
+        const p2 = document.createElement('hp');
+        p2.textContent = "ME TOO!";
+        div.appendChild(p2);
+
+        // place div
+        content.appendChild(div);
+
+        // Make button 2 interactive
+        let btn = document.querySelector('#btn');
+        btn.onclick = () => alert('Hello World');
+
+        // Alert Function
+        function helloWorld() {
+            alert('Hello World');
+        }
+        
+        // Make button 3 interactive
+        let btn3 = document.querySelector('#btn3');
+        btn3.addEventListener('click', function(e) {
+            e.target.style.background = 'blue';
+        });
+
+    </script>
+</body>
+</html>
