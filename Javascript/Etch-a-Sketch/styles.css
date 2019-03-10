@@ -10,5 +10,8 @@
 
 .square {
     background-color: #ADAAA5;
-    
+}
+
+.drawn {
+    background-color: black;
 }

@@ -9,19 +9,30 @@
 </head>
 <body>
     <script>
+        
+        // Initialize the Etch-a-Sketch
         let div = null;
-        let wrapper = document.createElement('div');
+        let frame = document.createElement('div');
         let body = document.querySelector('body');
 
-        wrapper.classList.add("frame");
-        body.appendChild(wrapper);
+        frame.classList.add("frame");
+        body.appendChild(frame);
         
-
         for (let index = 0; index < (16*16); index++) {
             div = document.createElement('div');
             div.classList.add("square");
-            wrapper.appendChild(div);
+            frame.appendChild(div);
         }
+
+        // Drawing functionality
+        function draw() {
+            let classes = this.classList;
+            classes.add('drawn');
+        }
+
+        const squares = Array.from(document.querySelectorAll('.square'));
+        squares.forEach(square => square.addEventListener('mouseenter', draw));
+
     </script>
 </body>
 </html>
