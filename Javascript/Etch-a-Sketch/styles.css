@@ -1,0 +1,14 @@
+.frame {
+    display: grid;
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+    border: 10px solid red;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
+
+.square {
+    background-color: #ADAAA5;
+    
+}
